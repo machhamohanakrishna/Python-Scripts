@@ -1,0 +1,18 @@
+import re
+from datetime import datetime
+startTime = datetime.now()
+IP_list = []
+file = open("Path_of_file", "r")
+for line in file:
+       
+        Ip = re.search(r'[0-9]+(?:\.[0-9]+){3}', line)
+        a = Ip.group()
+        IP_list.append(a)
+ip_count = {}
+for ip in c:
+    if ip in ip_count:
+        ip_count[ip] = ip_count[ip] + 1
+    else:
+        ip_count[ip] = 1
+print ip_count
+print(datetime.now() - startTime)
